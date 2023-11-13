@@ -1,9 +1,13 @@
+import { useState } from "react"
+
 export default function HomePage() {
+    const [count, setCount] = useState(0)
+
     return (
         <div className="text-white">
             <h1>Home Page</h1>
-            <button className="" 
-            onClick={() => console.log("Clicked")}>Click me</button>
+            <p>Count: {count}</p>
+            <button className="" onClick={() => setCount(count + 1)}>Click me</button>
         </div>
     )
 }
